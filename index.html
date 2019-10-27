@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+<!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar -->
+    <nav>
+        <div class="nav-wrapper" style="background-color: darkslategray;">
+          <a href="#" class="brand-logo center" >Weather Dashboard</a>
+        </div>
+      </nav>
+<!-- End Navbar -->
+
+<!-- Bootstrap -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3"  style="background-color:gainsboro;">
+<!-- put the submit button and input text in this div called submitBar-->
+            <div class="row" class="submitBar">
+                <h5>Search For a City:</h5>
+            </div>
+<!-- This is where the search history goes. For JS fill search history into searchHistory $(".searchHistory").append(history) -->            
+            <div class="row" class="searchHistory" ></div>
+        </div>
+
+<!--put the local temp information in this div called localTemp-->           
+        <div class="col-md-9">          
+            <div class="row">
+                <div class="card mt-2">
+                <div class="card-body" class="localTemp">
+<!-- JS will fill this content. $(."class").html("<h2>" + localInfo.PARAMETER + "<h2>") and $(."class").text("Temperature: " + "localInfo.PARAMETER") --> 
+                    <div class="city"></div>
+                    <div class="temp"></div>
+                    <div class="humidity"></div>
+                    <div class="wind"></div>
+                    <div class="uv"></div>
+              </div>
+            </div>
+            </div>
+<!-- JS will create the cards to append into cardSection. $(".cardSection").append(forecast) -->
+            <div class="row">
+                <div class="container-fluid" class="cardSection"></div>
+                <h4>5 Day Forecast</h4>
+            </div>
+        </div>        
+    </div>
+</div>
+
+<!-- Jquery JS and JS File-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="script.js"></script>    
+</body>
